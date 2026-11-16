@@ -41,27 +41,163 @@
 @media(max-width:760px){.container{width:calc(100% - 38px)}.masthead{height:64px}.wordmark{font-size:22px}.desktop-nav,.nav-suffix{display:none}.menu-toggle{display:block}.mobile-nav.open{display:flex;position:fixed;top:64px;left:0;right:0;z-index:49;background:var(--paper);border-bottom:1px solid var(--line);padding:22px 20px 28px;gap:20px;flex-direction:column;font-size:14px;font-weight:600}.hero-copy{position:relative;left:auto;top:auto;width:100%;max-width:none;padding:53px 19px 25px}.hero-copy .tiny{margin-bottom:13px}.hero h1{font-size:clamp(38px,9vw,56px);margin-bottom:12px}.hero-copy p{font-size:13px;line-height:1.9}.hero-bottom{padding-block:16px}.chapter{padding:68px 0}.chapter-top{margin-bottom:30px}.heading{font-size:clamp(35px,8vw,47px)}.deck{font-size:13px;line-height:1.9;margin-top:18px}.manifesto-layout,.wearing-layout,.intelligence-intro,.sound-heading,.app-head,.colors-head,.specs-lede{grid-template-columns:1fr;gap:25px}.manifesto h2{font-size:clamp(38px,8.5vw,51px)}.manifesto-notes{margin-top:33px}.manifesto-notes article{padding-right:10px}.manifesto-notes article+article{padding-left:10px}.manifesto-notes p{font-size:11px}.wearing-layout{gap:32px}.wearing-copy{order:-1}.wearing-copy .heading{font-size:clamp(35px,8vw,47px)}.intelligence{padding-bottom:0}.intelligence-intro{margin-bottom:32px}.intelligence .heading{font-size:clamp(38px,8.3vw,55px)}.intelligence .deck{margin:0}.ai-uses{grid-template-columns:1fr}.ai-uses article,.ai-uses article+article{padding:16px 0;border-left:0;border-bottom:1px solid #56615c}.ai-uses .idx{display:inline;margin:0 16px 0 0}.ai-uses b{display:inline}.ai-uses p{margin-top:8px}.ai-photo-note{font-size:10px}.sound-facts>div{padding-right:12px}.sound-facts>div+div{padding-left:12px}.sound-facts b{font-size:12px}.sound-facts span{font-size:11px}.app-details{flex-direction:column;gap:6px}.colors figure{margin-top:26px}.color-choice{gap:8px;padding-right:5px;min-height:80px}.color-choice+.color-choice{padding-left:6px}.color-dot{width:16px;height:16px}.color-label{font-size:11px}.color-label small{font-size:9px}.specs-table{grid-template-columns:1fr}.specs-lede{margin-bottom:33px}.faq{margin-top:50px}.endcap{padding:95px 18px}.endcap h2{font-size:clamp(63px,13vw,90px)}.footer-inner{flex-direction:column}}
 @media(max-width:410px){.hero-copy{padding-top:35px}.hero h1{font-size:37px}.manifesto-notes{grid-template-columns:1fr}.manifesto-notes article,.manifesto-notes article+article{border-left:0;border-bottom:1px solid var(--line);padding:15px 0}.color-choice{flex-direction:column;align-items:flex-start;justify-content:center;padding:10px 4px}.color-choice+.color-choice{padding-left:6px}.color-label{font-size:10px}.color-label small{font-size:8px}.color-dot{width:17px;height:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-padding-top:80px}*{transition:none!important}}
+
+/* AEVON V3: product-first editorial detail system. All product images are displayed uncropped. */
+:root{--paper:#f8f8f5;--cream:#f0f0ec;--white:#fff;--ink:#17211e;--secondary:#58645e;--line:#d3d9d3;--accent:#315b4a}
+html{scroll-padding-top:76px}
+body{font-optical-sizing:auto;letter-spacing:-.018em}
+.container{width:min(100% - 104px,1360px)}
+.tiny{font-size:11px;letter-spacing:.16em}
+.masthead{height:78px;background:rgba(252,252,249,.97);border-bottom-color:#d8dcd7}
+.reading-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:transparent}
+.reading-progress>span{display:block;width:0;height:100%;background:#385d4d;transition:width .05s linear}
+.wordmark{font-size:24px;letter-spacing:.19em;font-weight:700}
+.desktop-nav{gap:34px;font-size:13px}
+.desktop-nav a{position:relative;padding:10px 0}
+.desktop-nav a::after{content:'';height:1px;background:var(--accent);position:absolute;left:0;right:100%;bottom:3px;transition:right .2s ease}
+.desktop-nav a:hover::after,.desktop-nav a:focus-visible::after{right:0}
+.hero{background:#f3eeea}
+.hero-copy{left:max(52px,calc((100vw - 1360px)/2));padding-top:clamp(45px,6vw,107px);width:min(36%,510px)}
+.hero-copy .tiny{letter-spacing:.22em;font-size:10px;color:#665c56;margin-bottom:17px}
+.hero-rule{width:43px;height:1px;background:#6d6259;margin-bottom:20px}
+.hero h1{font-size:clamp(42px,4.8vw,69px);letter-spacing:-.077em;line-height:1.23;margin-bottom:20px}
+.hero h1 span{white-space:nowrap}
+.hero-copy p{font-size:14px;line-height:1.85}
+.hero-smallprint{display:block;font:600 9px 'DM Sans',sans-serif;letter-spacing:.16em;color:#786b60;margin-top:26px}
+.hero-bottom{padding-top:19px;padding-bottom:19px;font-size:11px;letter-spacing:.06em;border-top-color:#ddd8d0}
+.hero-bottom>a{font:700 11px 'DM Sans',sans-serif;letter-spacing:.12em;color:#283b31;border-bottom:1px solid #576a5d;padding-bottom:5px}
+.hero-bottom>a span{margin-left:20px}
+.mini-signal{display:inline-block;width:6px;height:6px;border-radius:50%;background:#466b57;margin-right:10px;vertical-align:middle}
+.chapter{padding:clamp(98px,8.5vw,156px) 0}
+.chapter-top{border-top:1px solid #b9c8be;padding-top:17px;margin-bottom:52px}
+.chapter-counter{font-size:11px;letter-spacing:.14em}
+.heading{font-size:clamp(42px,4.65vw,68px);letter-spacing:-.072em;line-height:1.26;font-weight:650}
+.deck{font-size:15px;line-height:1.98;color:#58645e;max-width:510px}
+.manifesto{background:#fff}
+.manifesto-layout{grid-template-columns: minmax(205px,.31fr) 1fr;gap:6vw}
+.manifesto .eyeline{font-size:11px;line-height:1.8;color:#557268}
+.manifesto .eyeline span{display:block;color:#9da99f;margin-top:7px;font-size:10px}
+.manifesto h2{font-size:clamp(51px,5.5vw,87px);line-height:1.24;font-weight:600;letter-spacing:-.085em}
+.manifesto h2 em{color:#496f5e;font-size:.8em}
+.manifesto-notes{border-top:1px solid #cad2cb;margin-top:72px}
+.manifesto-notes article{padding:27px 24px 14px 0;position:relative}
+.manifesto-notes article+article{padding-left:30px}
+.manifesto-notes b{font-size:11px;color:#406454;margin-bottom:15px}
+.manifesto-notes p{font-size:14px;line-height:1.9;max-width:270px}
+.wearing{background:#eff0ec}
+.wearing-layout{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(45px,7vw,120px)}
+.wearing-image{position:relative}
+.wearing-image img{width:100%;height:auto;object-fit:contain;border:1px solid #e3e3de}
+.wearing-copy .detail-index{color:#426c58;margin-bottom:30px}
+.wearing-copy .heading{font-size:clamp(42px,3.9vw,62px)}
+.wearing-copy .deck{margin-top:26px}
+.detail-rows{border-top:1px solid #b9c7bc;margin-top:46px}
+.detail-row{grid-template-columns:29px minmax(95px,.7fr) 1.45fr;gap:12px;padding:20px 0;border-color:#cdd5ce;align-items:start}
+.detail-number{color:#6a8b76!important;font:600 10px 'DM Sans',sans-serif;letter-spacing:.04em;padding-top:4px}
+.detail-row b{font-size:14px}
+.detail-row span{font-size:13px}
+.intelligence{background:#182820;color:#f5f8f4}
+.intelligence .chapter-top{border-color:#466653}
+.intelligence-intro{grid-template-columns:1.1fr .9fr;gap:9%}
+.intelligence .heading{font-size:clamp(48px,5vw,77px);line-height:1.2}
+.intelligence .deck{font-size:16px;color:#bfd0c3}
+.ai-uses{border-color:#5c7565}
+.ai-uses article{padding:33px 28px 40px 0}
+.ai-uses article+article{padding-left:35px;border-color:#5c7565}
+.ai-uses .idx{font-size:10px;letter-spacing:.16em;color:#a6bfaf;margin-bottom:22px}
+.ai-uses b{font-size:23px;font-weight:600;letter-spacing:-.05em;margin-bottom:12px}
+.ai-uses p{font-size:13px;color:#c5d4c9;line-height:1.8}
+.ai-pic{background:#eee8df;border-top:1px solid #d7d9cb}
+.ai-pic img{width:100%;height:auto;object-fit:contain}
+.sound{background:#fbfbf8}
+.sound-heading{grid-template-columns:1fr .7fr}
+.sound-facts{border-top:1px solid #b4c1b6;margin-top:40px}
+.sound-facts>div{padding:37px 34px 12px 0;display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+.sound-facts>div+div{padding-left:36px;border-color:#d0d8d0}
+.sound-facts b{font-family:'DM Sans','Noto Sans KR',sans-serif;font-size:clamp(20px,2.2vw,31px);font-weight:500;letter-spacing:-.04em}
+.sound-facts span:last-child{font-size:14px;line-height:1.8}
+.sound-kicker{font:600 10px 'DM Sans',sans-serif;letter-spacing:.14em;color:#648171!important;margin:9px 0}
+.sound-glyph{height:64px;display:flex;align-items:center;gap:7px}
+.sound-glyph i{display:block;width:3px;border-radius:5px;height:16px;background:#668c76}
+.sound-glyph i:nth-child(2),.sound-glyph i:nth-child(4){height:33px}.sound-glyph i:nth-child(3){height:52px}
+.sound-glyph-anc i{background:#879f93}.sound-glyph-anc i:nth-child(1),.sound-glyph-anc i:nth-child(5){height:43px}.sound-glyph-anc i:nth-child(3){height:12px}
+.sound-glyph-touch i{background:#587361}.sound-glyph-touch i:nth-child(1),.sound-glyph-touch i:nth-child(5){height:11px}.sound-glyph-touch i:nth-child(2),.sound-glyph-touch i:nth-child(4){height:24px}
+.app-story{background:#fff}
+.app-head{grid-template-columns:1fr .7fr;align-items:end}
+.app-story figure img{object-fit:contain}
+.app-details{font-size:12px;letter-spacing:.035em}
+.app-details b span{color:#9bb0a1;margin:0 6px}
+.colors{background:#f0f0ec}
+.colors figure{margin-top:60px}
+.colors figure img{display:block;width:100%;height:auto;object-fit:contain}
+.color-legend{margin-top:28px;border-color:#bfcac0}
+.color-choice{padding-top:20px;padding-bottom:20px;min-height:94px}
+.color-choice[aria-pressed="true"]{background:#fff;border-color:#a7b8a9}
+.color-choice[aria-pressed="true"]::after{height:3px;background:#315b4a}
+.color-dot{width:25px;height:25px}
+.color-label{font-size:14px}
+.color-label small{font-size:11px;margin-top:4px}
+.color-meta{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-top:25px}
+.color-meta .tiny{font-size:9px;color:#84958a}
+.color-current{margin:0;font-size:13px;font-weight:600;color:#315844}
+.specs{background:#fff}
+.specs-table{column-gap:8vw;border-color:#a4b9a8}
+.spec-row{padding:21px 4px 21px 0;font-size:14px}
+.spec-row b{font-weight:650}
+.faq h3{font-size:28px}
+.faq summary{font-size:15px;padding-top:24px;padding-bottom:24px}
+.faq details p{font-size:14px}
+.endcap{background:#15271d;padding:145px 25px}
+.endcap h2{font-size:clamp(68px,9vw,144px);letter-spacing:-.088em}
+.endcap p{font-size:15px}
+.footer{background:#111d16}
+@media(max-width:1100px){.container{width:min(100% - 64px,1350px)}.hero-copy{left:32px;width:39%;padding-top:5.8vw}.hero h1{font-size:clamp(39px,5vw,57px)}.chapter{padding:95px 0}.manifesto h2{font-size:clamp(45px,5.5vw,74px)}}
+@media(max-width:760px){
+ .container{width:calc(100% - 38px)}.masthead{height:64px}.desktop-nav{display:none}.menu-toggle{display:block}.wordmark{font-size:21px}
+ .hero-copy{position:relative;left:auto;top:auto;width:100%;max-width:none;padding:46px 19px 28px}
+ .hero-rule{margin-bottom:16px}.hero h1{font-size:clamp(40px,9vw,57px);line-height:1.23}.hero-smallprint{font-size:8px;margin-top:18px}
+ .hero-bottom{padding-block:16px;font-size:10px}.hero-bottom>a{font-size:10px}.hero-bottom>a span{margin-left:6px}
+ .chapter{padding:80px 0}.chapter-top{margin-bottom:35px}
+ .heading{font-size:clamp(39px,8.5vw,53px)}.deck{font-size:15px;line-height:1.85}
+ .manifesto-layout,.wearing-layout,.intelligence-intro,.sound-heading,.app-head,.colors-head,.specs-lede{grid-template-columns:1fr;gap:24px}
+ .manifesto h2{font-size:clamp(46px,9vw,63px)}.manifesto-notes{margin-top:42px}
+ .manifesto-notes{grid-template-columns:1fr 1fr 1fr}.manifesto-notes article{padding-right:12px}.manifesto-notes article+article{padding-left:12px}
+ .manifesto-notes p{font-size:12px}.wearing-copy{order:-1}.wearing-copy .heading{font-size:clamp(39px,8.4vw,53px)}.wearing-image img{width:100%}
+ .detail-row{grid-template-columns:25px minmax(80px,.6fr) 1.3fr;padding:16px 0}.detail-row span{font-size:12px}
+ .intelligence{padding-bottom:0}.intelligence .heading{font-size:clamp(40px,8.5vw,60px)}.intelligence .deck{font-size:14px}
+ .ai-uses{grid-template-columns:1fr}.ai-uses article,.ai-uses article+article{padding:22px 0;border-left:0;border-bottom:1px solid #496e54}
+ .ai-uses b{font-size:21px}.ai-uses .idx{margin:0 0 10px;display:block}.ai-uses p{font-size:13px;margin-top:9px}
+ .sound-facts{grid-template-columns:1fr}.sound-facts>div,.sound-facts>div+div{display:grid;grid-template-columns:57px 1fr;grid-template-rows:auto auto auto;gap:1px 20px;align-items:center;padding:20px 0;border-left:0;border-bottom:1px solid var(--line)}
+ .sound-glyph{grid-row:1/4;align-self:center;height:58px}.sound-glyph i{width:3px;margin-right:1px}.sound-kicker{margin:0}.sound-facts b{font-size:23px}.sound-facts span:last-child{font-size:13px}
+ .app-head{margin-bottom:26px}.app-details{gap:6px}.colors figure{margin-top:34px}
+ .color-legend{grid-template-columns:1fr 1fr;gap:0}.color-choice,.color-choice+.color-choice{padding:16px 8px;min-height:76px}
+ .color-label{font-size:13px}.color-dot{width:20px;height:20px}.color-meta{flex-direction:column;align-items:flex-start;gap:8px}.color-current{font-size:13px}
+ .specs-table{grid-template-columns:1fr}.spec-row{font-size:14px}.faq summary{font-size:15px}
+ .endcap{padding:105px 19px}.endcap h2{font-size:clamp(61px,13vw,94px)}
+}
+@media(max-width:410px){.hero-copy{padding-top:38px}.hero h1{font-size:clamp(36px,9.3vw,41px)}.hero-copy p{font-size:13px}.chapter{padding:68px 0}.manifesto-notes{grid-template-columns:1fr}.manifesto-notes article,.manifesto-notes article+article{padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}.manifesto-notes p{font-size:13px}.color-legend{grid-template-columns:1fr 1fr}.color-label{font-size:12px}.detail-row{grid-template-columns:20px 83px 1fr;gap:7px}.detail-row b{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.reading-progress>span{transition:none}}
 </style>
 </head>
 <body>
 <a class="sr-only" href="#main">본문으로 바로가기</a>
-<header class="masthead"><div class="container"><a href="#top" class="wordmark" aria-label="AEVON 홈">AEVON</a><nav class="desktop-nav" aria-label="메인 메뉴"><a href="#design">디자인</a><a href="#ai">AI 경험</a><a href="#app">앱 콘셉트</a><a href="#colors">컬러</a><a href="#specs">제품 정보</a></nav><span class="nav-suffix">AI SMART EARBUDS</span><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">메뉴 ＋</button></div></header>
+<header class="masthead"><div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div><div class="container"><a href="#top" class="wordmark" aria-label="AEVON 홈">AEVON</a><nav class="desktop-nav" aria-label="메인 메뉴"><a href="#design">디자인</a><a href="#ai">AI 경험</a><a href="#app">앱 콘셉트</a><a href="#colors">컬러</a><a href="#specs">제품 정보</a></nav><span class="nav-suffix">AI SMART EARBUDS</span><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">메뉴 ＋</button></div></header>
 <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="#design">디자인</a><a href="#ai">AI 경험</a><a href="#app">앱 콘셉트</a><a href="#colors">컬러</a><a href="#specs">제품 정보</a></nav>
 <main id="main">
-<section class="hero" id="top"><div class="hero-scene"><div class="hero-copy"><span class="tiny">AEVON / AI SMART EARBUDS</span><h1>듣는 것을 넘어,<br>AI와 대화하다.</h1><p>일상의 모든 순간을 이어주는<br>새로운 음성 경험.</p></div><picture><source srcset="assets/hero-mobile.webp" media="(max-width:760px)" width="941" height="1672"><img src="assets/hero-desktop.webp" width="1672" height="941" alt="샴페인 골드 컬러 AEVON 이어폰과 충전 케이스, 착용 장면" fetchpriority="high"></picture></div><div class="container hero-bottom"><span>THE NEXT WAY TO LISTEN</span><strong>EXPLORE AEVON <span aria-hidden="true">↓</span></strong></div></section>
-<section class="chapter manifesto" id="overview"><div class="container"><div class="chapter-top"><span class="tiny">INTRODUCING AEVON</span><span class="chapter-counter">01 / 06</span></div><div class="manifesto-layout"><p class="eyeline">ENGINEERED FOR EVERYDAY</p><h2>이어폰의 역할을<br>다시 생각하다.<br><em>Beyond listening.</em></h2></div><div class="manifesto-notes"><article><b>01 / LISTEN</b><p>일상을 채우는 선명한 음악과 통화 경험.</p></article><article><b>02 / CONNECT</b><p>블루투스로 이어지는 자연스러운 사용 흐름.</p></article><article><b>03 / ASK</b><p>음성 대화와 번역을 지향하는 AI 경험.</p></article></div></div></section>
-<section class="chapter wearing" id="design"><div class="container"><div class="chapter-top"><span class="tiny">FORM MEETS EVERYDAY</span><span class="chapter-counter">02 / 06</span></div><div class="wearing-layout"><figure class="wearing-image"><img src="assets/lifestyle.webp" width="1122" height="1402" loading="lazy" alt="AEVON 이어폰을 착용하고 휴식하는 모습과 케이스 전체가 보이는 제품 사진"><figcaption class="section-caption"><strong>AEVON / EVERYDAY</strong><span>일상 속 착용 경험</span></figcaption></figure><div class="wearing-copy"><p class="detail-index">01 — DESIGN LANGUAGE</p><h2 class="heading">일상에 자연스럽게,<br>디테일은 선명하게.</h2><p class="deck">부드러운 충전 케이스의 실루엣과 메탈릭 마감. 귀에 자연스럽게 어우러지는 형태까지. 과한 장식 없이 제품 그 자체의 존재감을 강조했습니다.</p><div class="detail-rows"><div class="detail-row"><b>충전 케이스</b><span>곡선을 살린 유선형 디자인</span></div><div class="detail-row"><b>착용</b><span>교체형 이어팁 S / M / L</span></div><div class="detail-row"><b>연결</b><span>블루투스 무선 연결</span></div></div></div></div></div></section>
-<section class="chapter intelligence" id="ai"><div class="container"><div class="chapter-top"><span class="tiny">THE INTELLIGENCE INSIDE</span><span class="chapter-counter">03 / 06</span></div><div class="intelligence-intro"><h2 class="heading">당신의 질문에,<br>목소리로 답하다.</h2><p class="deck">궁금한 순간의 질문부터 외국어 대화까지. AEVON은 이어폰을 통해 AI와 대화하는 새로운 사용 경험을 지향합니다.</p></div><div class="ai-uses"><article><span class="idx">01</span><b>AI 음성 대화</b><p>핸즈프리 대화를 목표로 하는 ChatGPT 연동 콘셉트.</p></article><article><span class="idx">02</span><b>실시간 번역</b><p>다른 언어의 대화를 더 편하게 이어가기 위한 통역 기능 목표.</p></article><article><span class="idx">03</span><b>개인 AI 비서</b><p>일정과 일상적인 질문을 도와주는 사용 시나리오.</p></article></div></div><figure class="ai-pic"><img src="assets/sound.webp" width="1672" height="941" loading="lazy" alt="완전한 구도로 표현된 AEVON 제품과 음성 파동 이미지"></figure><div class="container ai-photo-note">THE AEVON SOUND EXPERIENCE · PRODUCT CONCEPT</div></section>
-<section class="chapter sound" id="sound"><div class="container"><div class="chapter-top"><span class="tiny">SOUND, REIMAGINED</span><span class="chapter-counter">04 / 06</span></div><div class="sound-heading"><h2 class="heading">들을 때는 깊게,<br>움직일 때는 가볍게.</h2><p class="deck">음악과 통화, 노이즈 캔슬링과 터치 조작까지. 여러 기능을 복잡하게 나열하기보다 실제로 사용하는 순간을 중심으로 생각했습니다.</p></div><div class="sound-facts"><div><b>Premium Sound</b><span>음악·통화를 위한 사운드 경험</span></div><div><b>ANC</b><span>주변 소음 감소 기능 목표</span></div><div><b>Touch Control</b><span>재생·곡 전환·AI 호출·모드 전환</span></div></div></div></section>
-<section class="chapter app-story" id="app"><div class="container"><div class="chapter-top"><span class="tiny">AI MEETS YOUR PHONE</span><span class="chapter-counter">05 / 06</span></div><div class="app-head"><h2 class="heading">이어폰 너머,<br>연결되는 AI 경험.</h2><p class="deck">AI 음성 대화, 실시간 번역, 일정 정리까지. 스마트폰과 이어폰이 함께하는 새로운 경험을 시각화했습니다.</p></div><figure><img src="assets/app-concept.webp" width="1672" height="941" loading="lazy" alt="AEVON 이어폰과 음성 대화, 번역, 일정 관리 기능을 표현한 세 개의 앱 콘셉트 화면"><figcaption class="section-caption"><strong>AI / INTERFACE STUDY</strong><span>앱 UI 콘셉트 이미지</span></figcaption></figure><p class="app-legal">※ 앱 화면은 시각적 콘셉트입니다. 실제 출시 앱의 디자인, ChatGPT 연결 및 지원 기능은 최종 확정되지 않았습니다.</p><div class="app-details"><b>VOICE · TRANSLATION · ASSISTANT</b><span>사용 경험 중심의 기능 안내</span></div></div></section>
-<section class="chapter colors" id="colors"><div class="container"><div class="chapter-top"><span class="tiny">COLOUR COLLECTION</span><span class="chapter-counter">06 / 06</span></div><div class="colors-head"><h2 class="heading">어떤 컬러든,<br>나의 일상과 함께.</h2><p class="deck">미드나이트 블랙부터 세라믹 화이트까지. 네 가지 컬러를 한 화면에서 비교해 보세요.</p></div><figure><img src="assets/colors.webp" width="1672" height="941" loading="lazy" alt="미드나이트 블랙, 티타늄 실버, 샴페인 골드, 세라믹 화이트 케이스 네 개 모두 보이는 원본 전체 제품 이미지"><figcaption class="section-caption"><strong>FOUR FINISHES / ONE DESIGN</strong><span>제품 색상 콘셉트</span></figcaption></figure><div class="color-legend" role="group" aria-label="AEVON 컬러 안내"><button class="color-choice" type="button" data-color="0" aria-pressed="false"><span class="color-dot" style="background:#272828"></span><span class="color-label">미드나이트 블랙<small>01 / 04</small></span></button><button class="color-choice" type="button" data-color="1" aria-pressed="false"><span class="color-dot" style="background:#9b9da0"></span><span class="color-label">티타늄 실버<small>02 / 04</small></span></button><button class="color-choice" type="button" data-color="2" aria-pressed="true"><span class="color-dot" style="background:#caa986"></span><span class="color-label">샴페인 골드<small>03 / 04</small></span></button><button class="color-choice" type="button" data-color="3" aria-pressed="false"><span class="color-dot" style="background:#f4f2ee"></span><span class="color-label">세라믹 화이트<small>04 / 04</small></span></button></div><p class="color-current" id="color-name" aria-live="polite">선택한 컬러: 샴페인 골드</p><p class="app-legal">※ 제품 이미지와 컬러는 콘셉트이며 실제 제품과 차이가 있을 수 있습니다.</p></div></section>
+<section class="hero" id="top"><div class="hero-scene"><div class="hero-copy"><span class="tiny">AEVON / AI SMART EARBUDS</span><div class="hero-rule" aria-hidden="true"></div><h1>듣는 것을 넘어,<br><span>AI와 대화하다.</span></h1><p>일상의 모든 순간을 이어주는<br>새로운 음성 경험.</p><span class="hero-smallprint">INTRODUCING THE NEW LISTENING EXPERIENCE</span></div><picture><source srcset="assets/hero-mobile.webp" media="(max-width:760px)" width="941" height="1672"><img src="assets/hero-desktop.webp" width="1672" height="941" alt="샴페인 골드 컬러 AEVON 이어폰과 충전 케이스, 착용 장면" fetchpriority="high"></picture></div><div class="container hero-bottom"><span><span class="mini-signal" aria-hidden="true"></span> THE NEXT WAY TO LISTEN</span><a href="#overview">EXPLORE AEVON <span aria-hidden="true">↓</span></a></div></section>
+<section class="chapter manifesto" id="overview"><div class="container"><div class="chapter-top"><span class="tiny">INTRODUCING AEVON</span><span class="chapter-counter">01 / 06</span></div><div class="manifesto-layout"><p class="eyeline">ENGINEERED FOR EVERYDAY <span aria-hidden="true">/ 001</span></p><h2>이어폰의 역할을<br>다시 생각하다.<br><em>Beyond listening.</em></h2></div><div class="manifesto-notes"><article><b>01 / LISTEN</b><p>일상을 채우는 선명한 음악과 통화 경험.</p></article><article><b>02 / CONNECT</b><p>블루투스로 이어지는 자연스러운 사용 흐름.</p></article><article><b>03 / ASK</b><p>음성 대화와 번역을 지향하는 AI 경험.</p></article></div></div></section>
+<section class="chapter wearing" id="design"><div class="container"><div class="chapter-top"><span class="tiny">FORM MEETS EVERYDAY</span><span class="chapter-counter">02 / 06</span></div><div class="wearing-layout"><figure class="wearing-image"><img src="assets/lifestyle.webp" width="1122" height="1402" loading="lazy" alt="AEVON 이어폰을 착용하고 휴식하는 모습과 케이스 전체가 보이는 제품 사진"><figcaption class="section-caption"><strong>AEVON / EVERYDAY</strong><span>일상 속 착용 경험</span></figcaption></figure><div class="wearing-copy"><p class="detail-index">01 — DESIGN LANGUAGE</p><h2 class="heading">일상에 자연스럽게,<br>디테일은 선명하게.</h2><p class="deck">부드러운 충전 케이스의 실루엣과 메탈릭 마감. 귀에 자연스럽게 어우러지는 형태까지. 과한 장식 없이 제품 그 자체의 존재감을 강조했습니다.</p><div class="detail-rows" aria-label="제품 디자인 특징"><div class="detail-row"><span class="detail-number">01</span><b>충전 케이스</b><span>곡선을 살린 유선형 디자인</span></div><div class="detail-row"><span class="detail-number">02</span><b>착용</b><span>교체형 이어팁 S / M / L</span></div><div class="detail-row"><span class="detail-number">03</span><b>연결</b><span>블루투스 무선 연결</span></div></div></div></div></div></section>
+<section class="chapter intelligence" id="ai"><div class="container"><div class="chapter-top"><span class="tiny">THE INTELLIGENCE INSIDE</span><span class="chapter-counter">03 / 06</span></div><div class="intelligence-intro"><h2 class="heading">당신의 질문에,<br>목소리로 답하다.</h2><p class="deck">궁금한 순간의 질문부터 외국어 대화까지. AEVON은 이어폰을 통해 AI와 대화하는 새로운 사용 경험을 지향합니다.</p></div><div class="ai-uses" aria-label="AI 주요 활용 기능"><article><span class="idx">01 / VOICE</span><b>AI 음성 대화</b><p>핸즈프리 대화를 목표로 하는 ChatGPT 연동 콘셉트.</p></article><article><span class="idx">02 / LANGUAGE</span><b>실시간 번역</b><p>다른 언어의 대화를 더 편하게 이어가기 위한 통역 기능 목표.</p></article><article><span class="idx">03 / EVERYDAY</span><b>개인 AI 비서</b><p>일정과 일상적인 질문을 도와주는 사용 시나리오.</p></article></div></div><figure class="ai-pic"><img src="assets/sound.webp" width="1672" height="941" loading="lazy" alt="완전한 구도로 표현된 AEVON 제품과 음성 파동 이미지"></figure><div class="container ai-photo-note">THE AEVON SOUND EXPERIENCE · PRODUCT CONCEPT</div></section>
+<section class="chapter sound" id="sound"><div class="container"><div class="chapter-top"><span class="tiny">SOUND, REIMAGINED</span><span class="chapter-counter">04 / 06</span></div><div class="sound-heading"><h2 class="heading">들을 때는 깊게,<br>움직일 때는 가볍게.</h2><p class="deck">음악과 통화, 노이즈 캔슬링과 터치 조작까지. 여러 기능을 복잡하게 나열하기보다 실제로 사용하는 순간을 중심으로 생각했습니다.</p></div><div class="sound-facts"><div><span class="sound-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="sound-kicker">01 / AUDIO</span><b>Premium Sound</b><span>음악과 통화를 위한 사운드 경험</span></div><div><span class="sound-glyph sound-glyph-anc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="sound-kicker">02 / FOCUS</span><b>Active Noise Control</b><span>주변 소음 감소 기능 목표</span></div><div><span class="sound-glyph sound-glyph-touch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="sound-kicker">03 / CONTROL</span><b>Touch Control</b><span>재생·곡 전환·AI 호출·모드 전환</span></div></div></div></section>
+<section class="chapter app-story" id="app"><div class="container"><div class="chapter-top"><span class="tiny">AI MEETS YOUR PHONE</span><span class="chapter-counter">05 / 06</span></div><div class="app-head"><h2 class="heading">이어폰 너머,<br>연결되는 AI 경험.</h2><p class="deck">AI 음성 대화, 실시간 번역, 일정 정리까지. 스마트폰과 이어폰이 함께하는 새로운 경험을 시각화했습니다.</p></div><figure><img src="assets/app-concept.webp" width="1672" height="941" loading="lazy" alt="AEVON 이어폰과 음성 대화, 번역, 일정 관리 기능을 표현한 세 개의 앱 콘셉트 화면"><figcaption class="section-caption"><strong>AI / INTERFACE STUDY</strong><span>앱 UI 콘셉트 이미지</span></figcaption></figure><p class="app-legal">※ 앱 화면은 시각적 콘셉트입니다. 실제 출시 앱의 디자인, ChatGPT 연결 및 지원 기능은 최종 확정되지 않았습니다.</p><div class="app-details"><b>VOICE <span aria-hidden="true">/</span> TRANSLATION <span aria-hidden="true">/</span> ASSISTANT</b><span>사용 경험 중심의 기능 안내</span></div></div></section>
+<section class="chapter colors" id="colors"><div class="container"><div class="chapter-top"><span class="tiny">COLOUR COLLECTION</span><span class="chapter-counter">06 / 06</span></div><div class="colors-head"><h2 class="heading">어떤 컬러든,<br>나의 일상과 함께.</h2><p class="deck">미드나이트 블랙부터 세라믹 화이트까지. 네 가지 컬러를 한 화면에서 비교해 보세요.</p></div><figure><img src="assets/colors.webp" width="1672" height="941" loading="lazy" alt="미드나이트 블랙, 티타늄 실버, 샴페인 골드, 세라믹 화이트 케이스 네 개 모두 보이는 원본 전체 제품 이미지"><figcaption class="section-caption"><strong>FOUR FINISHES / ONE DESIGN</strong><span>제품 색상 콘셉트</span></figcaption></figure><div class="color-legend" role="group" aria-label="AEVON 컬러 안내"><button class="color-choice" type="button" data-color="0" aria-pressed="false"><span class="color-dot" style="background:#272828"></span><span class="color-label">미드나이트 블랙<small>01 / 04</small></span></button><button class="color-choice" type="button" data-color="1" aria-pressed="false"><span class="color-dot" style="background:#9b9da0"></span><span class="color-label">티타늄 실버<small>02 / 04</small></span></button><button class="color-choice" type="button" data-color="2" aria-pressed="true"><span class="color-dot" style="background:#caa986"></span><span class="color-label">샴페인 골드<small>03 / 04</small></span></button><button class="color-choice" type="button" data-color="3" aria-pressed="false"><span class="color-dot" style="background:#f4f2ee"></span><span class="color-label">세라믹 화이트<small>04 / 04</small></span></button></div><div class="color-meta"><p class="color-current" id="color-name" aria-live="polite">선택한 컬러: 샴페인 골드</p><span class="tiny">VIEW ALL FOUR FINISHES — FULL IMAGE</span></div><p class="app-legal">※ 제품 이미지와 컬러는 콘셉트이며 실제 제품과 차이가 있을 수 있습니다.</p></div></section>
 <section class="chapter specs" id="specs"><div class="container"><div class="chapter-top"><span class="tiny">THE DETAILS</span><span class="chapter-counter">INFORMATION</span></div><div class="specs-lede"><h2 class="heading">필요한 정보는,<br>명확하게.</h2><p class="deck">제공된 소개 자료를 바탕으로 정리한 사양입니다. 실제 출시 제품의 사양·지원 조건은 최종 확인이 필요합니다.</p></div><div class="specs-table"><div class="spec-row"><b>AI 음성 대화</b><span>ChatGPT 연동 기능 콘셉트</span></div><div class="spec-row"><b>실시간 번역</b><span>외국어 통역 지원 목표</span></div><div class="spec-row"><b>연결 방식</b><span>Bluetooth 5.4 (자료 기준)</span></div><div class="spec-row"><b>노이즈 캔슬링</b><span>ANC 지원 목표</span></div><div class="spec-row"><b>방수 등급</b><span>IPX4 (자료 기준)</span></div><div class="spec-row"><b>이어폰 사용 시간</b><span>최대 8시간 (자료 기준)</span></div><div class="spec-row"><b>케이스 포함 사용 시간</b><span>최대 32시간 (자료 기준)</span></div><div class="spec-row"><b>충전</b><span>USB-C · Qi 무선충전 안내</span></div><div class="spec-row"><b>호환</b><span>iOS / Android 지원 목표</span></div><div class="spec-row"><b>터치 조작</b><span>재생·곡 전환·AI 호출·모드 전환</span></div></div><div class="faq"><h3>자주 묻는 질문</h3><details><summary>AEVON은 어떻게 연결하나요?</summary><p>이어폰과 케이스를 충전한 후 스마트폰 블루투스 설정에서 AEVON 기기를 선택하는 방식으로 안내되어 있습니다. 실제 제품의 초기 연결 방법은 출시 사용설명서를 확인해 주세요.</p></details><details><summary>ChatGPT와 바로 대화할 수 있나요?</summary><p>제공 자료에는 이어폰의 AI 호출 기능과 앱 연동을 통한 음성 대화가 안내되어 있습니다. 실제 ChatGPT 연동 및 계정·앱 사용 조건은 아직 검증되지 않았습니다.</p></details><details><summary>외국어 실시간 번역도 가능한가요?</summary><p>소개 자료에 포함된 목표 기능입니다. 언어 지원 범위와 실시간 통역 방식은 출시 전 확인이 필요합니다.</p></details><details><summary>이어폰의 충전 및 사용 시간은 어떻게 되나요?</summary><p>제공 자료에는 이어폰 단독 최대 8시간, 케이스 포함 최대 32시간이 안내되어 있습니다. 실제 사용 시간은 사용 조건에 따라 달라질 수 있습니다.</p></details></div></div></section>
 <section class="endcap"><span class="tiny">AEVON / AI SMART EARBUDS</span><h2>Everyday,<br>with AI.</h2><p>듣는 것을 넘어, 생각하고 대화하는 이어폰.<br>AEVON이 제안하는 새로운 일상.</p></section>
 </main>
 <footer class="footer"><div class="container footer-inner"><div><a href="#top" class="wordmark">AEVON</a><p><small>© AEVON. AI Smart Earbuds.<br>제품 이미지 및 기능은 개발 콘셉트이며 출시 시 변경될 수 있습니다.</small></p></div><nav class="footer-links" aria-label="하단 메뉴"><a href="#design">디자인</a><a href="#ai">AI 경험</a><a href="#colors">컬러</a><a href="#specs">제품 정보</a></nav></div></footer>
 <script>
 (()=>{const menu=document.querySelector('.menu-toggle'),nav=document.getElementById('mobile-nav');const setMenu=on=>{nav.classList.toggle('open',on);menu.setAttribute('aria-expanded',String(on));menu.textContent=on?'닫기 −':'메뉴 ＋'};menu.addEventListener('click',()=>setMenu(menu.getAttribute('aria-expanded')!=='true'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
-const names=['미드나이트 블랙','티타늄 실버','샴페인 골드','세라믹 화이트'];document.querySelectorAll('.color-choice').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.color);document.querySelectorAll('.color-choice').forEach(c=>c.setAttribute('aria-pressed',String(c===b)));document.getElementById('color-name').textContent='선택한 컬러: '+names[i]}));})();
+const names=['미드나이트 블랙','티타늄 실버','샴페인 골드','세라믹 화이트'];document.querySelectorAll('.color-choice').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.color);document.querySelectorAll('.color-choice').forEach(c=>c.setAttribute('aria-pressed',String(c===b)));document.getElementById('color-name').textContent='선택한 컬러: '+names[i]}));const progress=document.getElementById('reading-progress-bar');const updateProgress=()=>{const root=document.documentElement;const remaining=root.scrollHeight-innerHeight;progress.style.width=(remaining>0?Math.min(100,Math.max(0,100*scrollY/remaining)):0)+'%'};addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();})();
 </script>
 </body>
 </html>
