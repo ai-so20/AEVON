@@ -177,6 +177,79 @@ body{font-optical-sizing:auto;letter-spacing:-.018em}
 }
 @media(max-width:410px){.hero-copy{padding-top:38px}.hero h1{font-size:clamp(36px,9.3vw,41px)}.hero-copy p{font-size:13px}.chapter{padding:68px 0}.manifesto-notes{grid-template-columns:1fr}.manifesto-notes article,.manifesto-notes article+article{padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}.manifesto-notes p{font-size:13px}.color-legend{grid-template-columns:1fr 1fr}.color-label{font-size:12px}.detail-row{grid-template-columns:20px 83px 1fr;gap:7px}.detail-row b{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.reading-progress>span{transition:none}}
+
+/* V4: responsive composition and readable details — never crop product images. */
+:root{--reading-ink:#24322c}
+.hero-scene picture img,.wearing-image img,.ai-pic img,.app-story figure img,.colors figure img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;aspect-ratio:auto}
+.hero-bottom>a{display:inline-flex;align-items:center;min-height:44px}
+.chapter-top .tiny{letter-spacing:.14em}
+.section-caption{min-height:36px;line-height:1.7}
+.wearing-copy .detail-rows{margin-top:36px}
+.detail-row{grid-template-columns:32px minmax(112px,.7fr) minmax(0,1.6fr)}
+.color-choice{cursor:pointer;outline-offset:2px}
+.color-choice:focus-visible{outline:2px solid #315b4a;outline-offset:-3px}
+.color-choice:hover{background:rgba(255,255,255,.66)}
+.faq summary{min-height:58px}
+.spec-row span{overflow-wrap:anywhere}
+@media (min-width:761px) and (max-width:1100px){
+ .hero-scene{display:flex;flex-direction:column}
+ .hero-copy{position:relative;left:auto;top:auto;order:-1;width:min(100% - 64px,820px);max-width:none;margin:0 auto;padding:64px 0 30px}
+ .hero h1{max-width:800px;font-size:clamp(44px,6.3vw,70px)}
+ .hero-copy p{font-size:15px}
+ .hero-scene picture{display:block;width:100%}
+ .wearing-layout{grid-template-columns:1fr 1fr;gap:36px}
+ .wearing-copy .heading{font-size:clamp(35px,4.4vw,53px)}
+ .detail-row{grid-template-columns:24px minmax(80px,.65fr) minmax(0,1.25fr);gap:8px}
+ .detail-row b,.detail-row span{font-size:12px}
+ .color-label{font-size:12px}
+}
+@media (max-width:760px){
+ html{scroll-padding-top:66px}
+ .container{width:calc(100% - 40px)}
+ .chapter{padding:72px 0}
+ .chapter-top{margin-bottom:28px}
+ .chapter-top .tiny{font-size:11px;line-height:1.5}
+ .heading{font-size:clamp(34px,8.2vw,48px);line-height:1.33}
+ .deck{font-size:15px;line-height:1.9}
+ .manifesto-layout{gap:15px}
+ .manifesto h2{font-size:clamp(39px,9.1vw,58px);line-height:1.28}
+ .manifesto-notes{grid-template-columns:1fr;margin-top:34px}
+ .manifesto-notes article,.manifesto-notes article+article{border-left:0;border-bottom:1px solid var(--line);padding:17px 0}
+ .manifesto-notes p{font-size:14px;line-height:1.8;max-width:none}
+ .wearing-copy .heading{font-size:clamp(34px,8vw,47px)}
+ .wearing-copy .detail-rows{margin-top:28px}
+ .detail-row{grid-template-columns:27px minmax(96px,.74fr) minmax(0,1.4fr);gap:10px}
+ .detail-row b,.detail-row span{font-size:13px;line-height:1.7}
+ .intelligence .heading{font-size:clamp(35px,8.5vw,54px)}
+ .ai-uses p{font-size:14px;line-height:1.85}
+ .sound-facts span:last-child{font-size:14px}
+ .color-choice,.color-choice+.color-choice{min-height:82px;padding:16px 10px;gap:12px}
+ .color-dot{width:23px;height:23px}
+ .color-label{font-size:14px;line-height:1.4}
+ .color-label small{font-size:11px}
+ .app-legal,.faq details p{font-size:13px;line-height:1.9}
+ .spec-row{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:14px}
+ .spec-row b,.spec-row span{font-size:13px;line-height:1.8}
+ .footer-links{flex-wrap:wrap;row-gap:15px}
+}
+@media (max-width:410px){
+ .container{width:calc(100% - 32px)}
+ .hero-copy{padding:33px 16px 23px}
+ .hero h1{font-size:clamp(34px,9vw,39px);white-space:normal}
+ .hero h1 span{white-space:normal}
+ .hero-bottom{gap:10px;flex-wrap:wrap}
+ .chapter{padding:62px 0}
+ .manifesto h2{font-size:clamp(36px,9vw,42px)}
+ .detail-row{grid-template-columns:22px minmax(75px,.8fr) minmax(0,1.3fr);gap:8px}
+ .detail-row b,.detail-row span{font-size:12px}
+ .color-choice,.color-choice+.color-choice{padding:12px 9px;min-height:80px;align-items:center;flex-direction:row}
+ .color-dot{width:20px;height:20px}
+ .color-label{font-size:12px}.color-label small{font-size:10px}
+ .chapter-counter{font-size:10px}
+ .section-caption{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){.desktop-nav a::after{transition:none}.color-choice{transition:none}}
+
 </style>
 </head>
 <body>
