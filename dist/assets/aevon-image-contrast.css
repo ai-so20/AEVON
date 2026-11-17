@@ -1,0 +1,8 @@
+/* AEVON-specific necessities only. Structure, dimensions, and interactions are inherited from the two unmodified LUMIVELIX CSS files. */
+@font-face{font-family:Pretendard;src:url("https://cdn.jsdelivr.net/gh/ai-so20/Lumivelix-@main/dist/assets/fonts/PretendardVariable.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+.hero{background:#f6ede7;color:#292b2a}
+.hero-copy .eyebrow{color:#776252}
+.hero-copy p{color:#4f514d}
+.hero-foot{color:#706d66}
+.nav:not(.scrolled){color:#292b2a;background:#f6f0e7b8}
+@media(max-width:900px){.hero-copy{color:#292b2a}.hero-copy p{color:#4f514d}}
